@@ -2,12 +2,12 @@ balance = 0
 
 def show_menu():
     print("Welcome to Jean-Baptiste Bank!")
-    print("1. Chck balance")
+    print("1. Check balance")
     print("2. Deposit Money")
     print("3. Withdraw Money")
     print("4. Exit")
 
-balance=0
+
 while True:
     show_menu()
     
@@ -17,11 +17,12 @@ while True:
     if choice == '1':
         print(f"Your balance is ${balance}")
 
-        continu =input("Will that be all? Y or N")
+        continu =input("Will that be all? Y or N").upper()
         if continu == 'N':
-             show_menu()
+             continue
         if continu == 'Y':
              print("Have a nice day! :)")
+             break
     elif choice == '2':
         deposit=float(input("How much money would you like to deposit? "))
         if deposit > 0:
